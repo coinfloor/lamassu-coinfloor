@@ -1,0 +1,18 @@
+{
+	"exchanges": {
+		"plugins": {
+			"current": {
+				"ticker": "coinfloor",
+				"trade": "coinfloor"
+			},
+			"settings": {
+				"coinfloor": {
+					"url": "",
+					"user_id": 0,
+					"cookie": "",
+					"passphrase": ""
+				}
+			}
+		}
+	}
+}
