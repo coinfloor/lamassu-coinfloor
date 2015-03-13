@@ -2,7 +2,28 @@
 
 This plugin enables Lamassu machines to obtain bitcoin pricing information from Coinfloor and to execute trades on Coinfloor. It implements the `ticker` and `trader` plugin interfaces of the Lamassu Rakía platform.
 
-## Configuration
+## Installing
+
+Run these four commands:
+
+```
+cd /usr/local/lib/node_modules/lamassu-server
+npm install lamassu-coinfloor
+cd /usr/local/lib/node_modules/lamassu-admin
+npm install lamassu-coinfloor
+```
+
+## Configuring
+
+Run:
+
+```
+node /usr/local/lib/node_modules/lamassu-server/node_modules/lamassu-coinfloor/setup
+```
+
+Enter the user ID, cookie, and passphrase, hitting <kbd>Enter</kbd> after each. The field for secret will remain blank when pasting the value.
+
+When complete, you'll see 'Success' and the machine will begin to use Coinfloor as ticker and trader.
 
 | Variable     | Description
 |--------------|-------------
