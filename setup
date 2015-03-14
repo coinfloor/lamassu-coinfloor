@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+'use strict';
+
+var LamassuConfig = require('lamassu-config');
+var promptly = require('promptly');
+
+var config = new LamassuConfig();
+
+console.log('\nSetting up the Coinfloor trading plugin.\n');
+console.log('Please enter your API credentials.\n');
+promptly.prompt('User ID: ', function(user_idErr, user_id) {
+  promptly.prompt('Cookie: ', function(cookieErr, cookie) {
+    promptly.password('Passphrase: ', function(passphraseErr, passphrase) {
+      updateDb(user_id, cookie, passphrase, function(err) {
+        if (err) throw err;
+        console.log('\nSuccess.');
+      });
+    });
+  });
+});
+
+function updateDb(user_id, cookie, passphrase, callback) {
+  var newConfig = {
+    exchanges: {
+      plugins: {
+        settings: {
+          coinfloor: {
+            url: '',
+            user_id: user_id,
+            cookie: cookie,
+            passphrase: passphrase
+          }
+        },
+        current: {
+          ticker: 'coinfloor',
+          trade: 'coinfloor'
+        }
+      }
+    }
+  };
+  config.mergeConfig(newConfig, callback);
+}
