@@ -1,6 +1,6 @@
 {
 	"name": "lamassu-coinfloor",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Coinfloor plugin for Lamassu Rakía",
 	"main": "lib/coinfloor.js",
 	"repository": {
@@ -17,7 +17,7 @@
 		"url": "https://www.coinfloor.co.uk/"
 	},
 	"bin": {
-		"setup": "./setup"
+		"coinfloor-setup": "./setup"
 	},
 	"homepage": "https://github.com/coinfloor/lamassu-coinfloor",
 	"bugs": {
