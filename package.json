@@ -1,6 +1,6 @@
 {
 	"name": "lamassu-coinfloor",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Coinfloor plugin for Lamassu Rakía",
 	"main": "lib/coinfloor.js",
 	"repository": {
