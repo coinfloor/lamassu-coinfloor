@@ -26,7 +26,7 @@ function updateDb(user_id, cookie, passphrase, callback) {
         settings: {
           coinfloor: {
             url: '',
-            user_id: user_id,
+            user_id: parseInt(user_id),
             cookie: cookie,
             passphrase: passphrase
           }
